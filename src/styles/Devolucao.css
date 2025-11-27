@@ -1,0 +1,184 @@
+/* ======== CONTAINER GERAL ======== */
+.dev-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 60px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* ======== CONTADOR FIXO ======== */
+.right-side {
+  position: fixed;       /* fixa na tela */
+  top: 150px;            /* ajuste conforme altura do seu card/título */
+  right: 50px;           /* distância da borda direita da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  z-index: 1000;         /* sempre acima do conteúdo */
+}
+
+.contador {
+  width: 110px;
+  height: 110px;
+  background: #000;
+  color: #00c8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  font-size: 50px;
+  font-weight: 900;
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.6);
+  user-select: none;
+}
+
+/* Outros estilos continuam iguais ao anterior */
+
+
+/* ======== TÍTULO ======== */
+.dev-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #00c8ff;
+  text-shadow: 0 0 15px #00c8ff;
+  letter-spacing: 2px;
+}
+
+/* ======== CARD ======== */
+.dev-card {
+  background: #11161c;
+  width: 900px;
+  max-width: 800px;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 35px rgba(0, 200, 255, 0.15);
+  border: 1px solid rgba(0, 200, 255, 0.25);
+}
+
+/* ======== LABEL ======== */
+.dev-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: block;
+  color: #00c8ff;
+}
+
+/* ======== INPUT ======== */
+.dev-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  background: #0d1218;
+  border: 2px solid #00c8ff;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 35px;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.25);
+}
+
+.dev-input:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+}
+
+/* ======== LISTA ======== */
+.dev-lista-container {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 40px;
+}
+
+.dev-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dev-item {
+  background: #0d1218;
+  border: 2px solid #00c8ff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.15);
+}
+
+.dev-vazio {
+  font-style: italic;
+  color: #888;
+  padding: 15px;
+}
+
+/* ======== LIXEIRA ======== */
+.dev-lixeira {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #ff4444;
+  transition: 0.2s;
+}
+
+.dev-lixeira:hover {
+  transform: scale(1.2);
+  color: #ff0000;
+}
+
+/* ======== BOTÃO IMPRIMIR E SALVAR ======== */
+.dev-btn {
+  width: 100%;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #00c8ff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00c8ff;
+  transition: 0.2s;
+}
+
+.dev-btn:hover {
+  background: #00a4d4;
+  box-shadow: 0 0 25px #00c8ff;
+}
+/* Container da lista + contador */
+.dev-main-content {
+  display: flex;
+  justify-content: space-between; /* lista à esquerda, contador à direita */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Lista continua igual */
+.dev-lista-container {
+  flex: 1; /* ocupa todo espaço disponível à esquerda */
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Contador no lado direito */
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; /* suficiente para o contador */
+  flex-shrink: 0; /* não encolhe */
+}

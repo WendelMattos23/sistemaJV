@@ -1,0 +1,232 @@
+/* ====== GERAL ====== */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* ====== TÍTULO ====== */
+.titulo {
+  color: #00c8ff;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00c8ff;
+  text-align: center;
+}
+
+/* ====== PAINEL CENTRAL ====== */
+.panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+
+
+  padding: 35px;
+  border-radius: 18px;
+
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.25);
+  width: 850px;
+}
+
+/* ====== LADO ESQUERDO ====== */
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels */
+.label {
+  color: #d8d8d8;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+/* Selects e Inputs */
+.select,
+.input-bip {
+  width: 100%;
+  padding: 12px;
+  background: #0f1115;
+  border: 1px solid #00c8ff;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.select:focus,
+.input-bip:focus {
+  box-shadow: 0 0 12px #00c8ff;
+}
+
+/* Checkboxes */
+.checkbox-area {
+  display: flex;
+  gap: 25px;
+  margin-top: 5px;
+}
+
+.checkbox-area label {
+  color: #cfcfcf;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ====== LISTA COM SCROLL ====== */
+.lista-container {
+  max-height: 140px;
+  overflow-y: auto;
+  background: #0f1115;
+  border-radius: 10px;
+  border: 1px solid #00c8ff;
+  padding: 10px;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  background: #1f242b;
+  padding: 10px;
+  border-radius: 8px;
+  color: #e8e8e8;
+  margin-bottom: 8px;
+  border-left: 4px solid #00c8ff;
+  font-size: 15px;
+}
+
+.btn-lixeira {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  color: #ff4d4d;
+  transition: 0.2s;
+}
+
+.btn-lixeira:hover {
+  transform: scale(1.2);
+}
+
+/* ====== BOTÃO ENVIAR ====== */
+.btn-enviar {
+  margin-top: 15px;
+  padding: 14px;
+  width: 100%;
+  background: #00c8ff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #0f1115;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 14px rgba(0, 200, 255, 0.65);
+}
+
+.btn-enviar:hover {
+  background: #00e0ff;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.9);
+}
+
+/* ====== CONTADOR ====== */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contador {
+  width: 110px;
+  height: 110px;
+  background: #00c8ff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  font-size: 50px;
+  font-weight: 900;
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.6);
+  user-select: none;
+}
+
+.contador-label {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #00c8ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00c8ff;
+}
+
+/* ====== ALERTAS ====== */
+.alerta-erro {
+  background: #ff4d4d;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(255, 70, 70, 0.7);
+  animation: fadeOut 1.5s forwards;
+}
+
+/* Timer para sumir */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+/* Container do toggle */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+/* Botões */
+.toggle-btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00cfff;
+  background: #1a1a1a;
+  border: 2px solid #00cfff;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  text-shadow: 0 0 8px rgba(0, 207, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 207, 255, 0.3);
+}
+
+/* Efeito hover */
+.toggle-btn:hover {
+  background: #00cfff;
+  color: #000;
+  box-shadow: 0 0 15px #00cfff;
+}
+
+/* Quando estiver ativo/selecionado */
+.toggle-btn.active {
+  background: #00cfff;
+  color: #000;
+  box-shadow: 0 0 20px #00cfff, 0 0 40px #00cfff;
+}
