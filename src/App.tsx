@@ -11,7 +11,7 @@ export default function App() {
       <TopTabs currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       {currentPage === "dashboard" && (
-        <Dashboard currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Dashboard />
       )}
 
       {currentPage === "devolucao" && (
